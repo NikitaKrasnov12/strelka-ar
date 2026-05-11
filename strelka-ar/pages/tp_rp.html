@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТП-РП 2820 — Стрелка AR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="../index.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <span class="page-header__title">Стрелка AR</span>
+    </header>
+
+    <section class="ar-viewer">
+        <model-viewer class="ar-viewer__container" src="../models/tp_rp.glb" ios-src="../models/tp-rp.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель трансформаторной подстанции ТП-РП 2820">
+            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
+        </model-viewer>
+        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+    </section>
+
+    <article class="object-info">
+        <h1 class="object-info__title">ТП-РП 2820</h1>
+        <div class="object-info__meta">
+            <span class="tag">Промышленная инфраструктура</span>
+            <span class="tag tag--accent">1960-е годы</span>
+        </div>
+        <p class="object-info__desc">Трансформаторная подстанция — распределительная подстанция, обеспечивавшая электроснабжение всего Горьковского речного порта. Подстанция питала портальные краны, освещение причалов, ленточные транспортеры, электропогрузчики и все складское хозяйство. Типовое промышленное сооружение из кирпича с характерными для советской промышленной архитектуры 1950-1960-х годов формами.</p>
+        <h2 class="object-info__section-title">В советский период</h2>
+        <p class="object-info__desc">Электрификация Горьковского порта была завершена к концу 1950-х годов. До этого часть оборудования работала на паровой тяге. ТП-РП 2820 обеспечивала круглосуточный режим работы порта, питая все механизмы причальной инфраструктуры. С ростом грузооборота и появлением мощных портальных кранов Ganz и TAKRAF энергетическая нагрузка на подстанцию постоянно увеличивалась.</p>
+        <nav class="object-nav">
+            <a href="water_station.html" class="object-nav__link">&larr; Фильтровальная станция</a>
+            <a href="ganz_16.html" class="object-nav__link">Кран Ganz 16/27,5т &rarr;</a>
+        </nav>
+    </article>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кран Ganz 16/27,5т — Стрелка AR</title>
+    <!-- Общий файл стилей проекта -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Библиотека model-viewer от Google для 3D и AR -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <!-- Шапка страницы объекта (sticky — остается при прокрутке) -->
+    <header class="page-header">
+        <a href="../index.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <span class="page-header__title">Стрелка AR</span>
+    </header>
+
+    <!-- Блок 3D-модели с поддержкой AR -->
+    <section class="ar-viewer">
+        <model-viewer
+            class="ar-viewer__container"
+            src="../models/ganz_16.glb"
+            ios-src="../models/ganz_16.usdz"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            ar-scale="auto"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            environment-image="neutral"
+            alt="3D-модель крана Ganz 16/27,5т">
+            <!-- Кнопка AR (отображается на мобильных устройствах) -->
+            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+            <!-- Заглушка при загрузке модели -->
+            <div class="model-loading" slot="poster">
+                <div class="spinner"></div>
+                <p>Загрузка 3D-модели...</p>
+            </div>
+        </model-viewer>
+        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+    </section>
+
+    <!-- Информация об объекте -->
+    <article class="object-info">
+        <h1 class="object-info__title">Портальный кран Ganz 16/27,5т</h1>
+
+        <div class="object-info__meta">
+            <span class="tag">Портовое оборудование</span>
+            <span class="tag tag--accent">1974 — демонтирован 2017</span>
+            <span class="tag">Венгрия, Будапешт</span>
+        </div>
+
+        <p class="object-info__desc">Портальные краны Ganz производились будапештским судо-краностроительным заводом и считались одними из самых надежных в мире. Модель 16/27,5т начала поставляться в советские порты в конце 1960-х годов. Кран перемещался по рельсам вдоль причала, разгружая баржи с песком, зерном, углем и строительными материалами. Грейфер захватывал мокрый песок прямо из трюмов, а крюковая подвеска позволяла работать с контейнерами и штучными грузами.</p>
+
+        <h2 class="object-info__section-title">В советский период</h2>
+        <p class="object-info__desc">Силуэты кранов Ganz на фоне Волги знал каждый горьковчанин. Кран работал круглогодично: зимой ледоколы приводили баржи по расчищенному фарватеру, и разгрузка не прекращалась даже в морозы. За одну навигацию через этот кран проходили десятки тысяч тонн грузов. Все четыре портальных крана были демонтированы при ликвидации порта в 2017 году для расчистки территории к Чемпионату мира по футболу.</p>
+
+        <!-- Навигация между объектами -->
+        <nav class="object-nav">
+            <a href="tp_rp.html" class="object-nav__link">&larr; ТП-РП 2820</a>
+            <a href="takraf_albatros.html" class="object-nav__link">Кран TAKRAF «Альбатрос» &rarr;</a>
+        </nav>
+    </article>
+
+</body>
+</html>

@@ -1,0 +1,540 @@
+/* ==========================================================
+   style.css — Стрелка AR
+   Основной файл стилей веб-приложения
+   Автор: Краснов Н.М., НГТУ им. Алексеева, 2026
+   ========================================================== */
+
+/* --- Подключение шрифтов Google Fonts ---
+   Playfair Display — заголовки (антиквенный, с засечками)
+   Source Sans 3 — основной текст (гротеск, без засечек) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+/* --- CSS-переменные (кастомные свойства) ---
+   Позволяют централизованно менять цвета и шрифты проекта */
+:root {
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+    --bg-page: #ffffff;
+    --bg-media: #f2f0ec;
+    --text-primary: #2c2420;
+    --text-body: #4a4440;
+    --text-muted: #7a7068;
+    --accent: #8b2f1a;
+    --accent-hover: #a33d26;
+    --gold: #b08d57;
+    --border: #d4c8b8;
+    --max-width: 1100px;
+    --section-gap: 80px;
+}
+
+/* --- Сброс стилей браузера --- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+/* ==========================================================
+   АНИМАЦИИ
+   Простые CSS-анимации для плавного появления элементов
+   ========================================================== */
+
+/* Появление снизу при прокрутке (применяется через JS) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Плавное появление (для шапки) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Класс-модификатор: элемент появляется при прокрутке */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================
+   ШАПКА САЙТА
+   ========================================================== */
+.site-header {
+    text-align: center;
+    padding: 56px 24px 40px;
+    border-bottom: 2px solid var(--border);
+    animation: fadeIn 1s ease;
+}
+
+.site-header__title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.site-header__subtitle {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.site-header__period {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 5px 24px;
+    border: 1px solid var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--accent);
+}
+
+/* ==========================================================
+   ВСТУПИТЕЛЬНЫЙ ТЕКСТ
+   ========================================================== */
+.intro {
+    max-width: 780px;
+    margin: 48px auto;
+    padding: 0 24px;
+}
+
+.intro p {
+    font-size: 1.05rem;
+    color: var(--text-body);
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 12px;
+}
+
+.intro p:first-child {
+    text-indent: 0;
+}
+
+/* --- Буквица (инициал) ---
+   Увеличенная первая буква на уровне первой строки.
+   Используется initial-letter для современных браузеров,
+   с фолбеком на font-size + vertical-align для остальных */
+.intro p:first-child::first-letter {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    vertical-align: baseline;
+    margin-right: 4px;
+}
+
+/* ==========================================================
+   ИСТОРИЧЕСКИЙ БЛОК (секция с текстом и фотографиями)
+   ========================================================== */
+.history-section {
+    max-width: var(--max-width);
+    margin: 0 auto var(--section-gap);
+    padding: 0 24px;
+}
+
+/* Метка главы (маленький текст над заголовком) */
+.history-section__label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+}
+
+/* Заголовок главы */
+.history-section__title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* --- Контейнер текста и фото ---
+   overflow: hidden создает блочный контекст форматирования (BFC),
+   который не позволяет float-элементам «вытекать» за пределы секции */
+.history-section__body {
+    overflow: hidden;
+}
+
+.history-section__body p {
+    font-size: 1rem;
+    color: var(--text-body);
+    text-align: justify;
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   МЕДИА-БЛОК (фото + подпись + кнопка AR)
+   Использует float для обтекания текстом.
+   Фото располагается сбоку, текст обтекает его и
+   продолжается ниже — как в журнальной верстке.
+   ========================================================== */
+.media-block {
+    width: 380px;
+    margin-bottom: 20px;
+}
+
+/* Фото слева: текст обтекает справа */
+.media-block--left {
+    float: left;
+    margin-right: 28px;
+}
+
+/* Фото справа: текст обтекает слева */
+.media-block--right {
+    float: right;
+    margin-left: 28px;
+}
+
+/* Контейнер фотографии */
+.media-block__photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--bg-media);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.media-block__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Плавное появление при загрузке */
+    transition: opacity 0.4s ease;
+}
+
+/* Подпись под фотографией */
+.media-block__caption {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* --- Кнопка «Смотреть в AR» ---
+   Расположена строго под фотографией,
+   занимает ту же ширину, что и фото */
+.media-block__ar-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px 0;
+    background-color: var(--accent);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.media-block__ar-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================
+   РАЗДЕЛИТЕЛЬ МЕЖДУ ГЛАВАМИ
+   ========================================================== */
+.section-divider {
+    max-width: 120px;
+    margin: 0 auto var(--section-gap);
+    border: none;
+    border-top: 2px solid var(--border);
+    clear: both;
+}
+
+/* ==========================================================
+   ПОДВАЛ САЙТА
+   ========================================================== */
+.site-footer {
+    text-align: center;
+    padding: 32px 24px;
+    border-top: 2px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 40px;
+    clear: both;
+}
+
+.site-footer__author {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+/* ==========================================================
+   СТРАНИЦА AR-ОБЪЕКТА (pages/*.html)
+   ========================================================== */
+
+/* Шапка страницы объекта */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-page);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.page-header__back {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.page-header__back:hover {
+    color: var(--accent-hover);
+}
+
+.page-header__title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+/* Контейнер 3D-модели (model-viewer) */
+.ar-viewer {
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 0 24px;
+}
+
+.ar-viewer__container {
+    width: 100%;
+    height: 450px;
+    background-color: #1a1a2e;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.ar-viewer__hint {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Кнопка AR внутри model-viewer */
+.ar-viewer__btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.2s ease;
+}
+
+.ar-viewer__btn:hover {
+    background: var(--accent-hover);
+}
+
+/* Описание объекта на AR-странице */
+.object-info {
+    max-width: 800px;
+    margin: 32px auto;
+    padding: 0 24px 48px;
+}
+
+.object-info__title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.object-info__meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Метки (теги) в информации об объекте */
+.tag {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 3px;
+    background: var(--bg-media);
+    color: var(--text-muted);
+}
+
+.tag--accent {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    background: transparent;
+}
+
+.object-info__desc {
+    font-size: 1rem;
+    color: var(--text-body);
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+.object-info__section-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Навигация между объектами (предыдущий / следующий) */
+.object-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+}
+
+.object-nav__link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    max-width: 45%;
+    transition: color 0.2s ease;
+}
+
+.object-nav__link:hover {
+    color: var(--accent);
+}
+
+/* Загрузка модели (спиннер) */
+.model-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #30363d;
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 12px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==========================================================
+   АДАПТИВНОСТЬ (мобильные устройства)
+   На экранах < 768px фотографии занимают полную ширину
+   и располагаются над текстом (float сбрасывается)
+   ========================================================== */
+@media (max-width: 768px) {
+    .site-header__title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    /* На мобильных: фото не float, на полную ширину */
+    .media-block,
+    .media-block--left,
+    .media-block--right {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .media-block__photo {
+        aspect-ratio: 16 / 10;
+    }
+
+    :root {
+        --section-gap: 48px;
+    }
+
+    /* AR-страница: уменьшаем высоту модели */
+    .ar-viewer__container {
+        height: 300px;
+    }
+
+    .object-info__title {
+        font-size: 1.3rem;
+    }
+
+    .page-header__title {
+        display: none; /* На мобильном прячем название в хедере */
+    }
+}
+
+/* ==========================================================
+   СТИЛИ ДЛЯ ПЕЧАТИ
+   ========================================================== */
+@media print {
+    .history-section {
+        break-inside: avoid;
+    }
+    .media-block__ar-btn,
+    .page-header {
+        display: none;
+    }
+}

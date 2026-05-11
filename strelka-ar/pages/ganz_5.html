@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кран Ganz 5/6т — Стрелка AR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="../index.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <span class="page-header__title">Стрелка AR</span>
+    </header>
+
+    <section class="ar-viewer">
+        <model-viewer class="ar-viewer__container" src="../models/ganz_5.glb" ios-src="../models/ganz_5.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель крана Ganz 5/6т">
+            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
+        </model-viewer>
+        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+    </section>
+
+    <article class="object-info">
+        <h1 class="object-info__title">Портальный кран Ganz 5/6т</h1>
+        <div class="object-info__meta">
+            <span class="tag">Портовое оборудование</span>
+            <span class="tag tag--accent">1970 — демонтирован 2017</span>
+            <span class="tag">Венгрия, Будапешт</span>
+        </div>
+        <p class="object-info__desc">Облегченная модель портального крана Ganz использовалась для работы с грузами до 6 тонн. Не оснащалась грейфером — применялась только с крюковой подвеской. Основное назначение: снабжение углем речных пароходов и теплоходов (бункеровка), а также погрузка штучных грузов небольшого веса. Компактные размеры позволяли размещать кран в стесненных условиях причала, где полноразмерные Ganz 16/27,5т не помещались.</p>
+        <h2 class="object-info__section-title">В советский период</h2>
+        <p class="object-info__desc">До перехода речного флота на дизельное топливо через Стрелку проходили огромные объемы угля для пароходов Волжского бассейна. Малый кран Ganz обеспечивал бункеровку судов, обслуживал мелкие партии промышленных грузов и участвовал в ремонтных работах на причале. Несмотря на скромную грузоподъемность, этот кран был незаменим в повседневной работе порта.</p>
+        <nav class="object-nav">
+            <a href="takraf_albatros.html" class="object-nav__link">&larr; Кран TAKRAF «Альбатрос»</a>
+            <a href="sobor.html" class="object-nav__link">Собор Александра Невского &rarr;</a>
+        </nav>
+    </article>
+</body>
+</html>

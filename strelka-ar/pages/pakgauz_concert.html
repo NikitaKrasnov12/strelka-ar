@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пакгауз (концертный зал) — Стрелка AR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="../index.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <span class="page-header__title">Стрелка AR</span>
+    </header>
+
+    <section class="ar-viewer">
+        <model-viewer class="ar-viewer__container" src="../models/pakgauz_concert.glb" ios-src="../models/pakgauz_concert.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель пакгауза (концертный зал)">
+            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
+        </model-viewer>
+        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+    </section>
+
+    <article class="object-info">
+        <h1 class="object-info__title">Пакгауз (концертный зал)</h1>
+        <div class="object-info__meta">
+            <span class="tag">Объект культуры</span>
+            <span class="tag tag--accent">1882 — сохранен</span>
+            <span class="tag">Сегодня — зал на 430 мест</span>
+        </div>
+        <p class="object-info__desc">Второй уцелевший каркас идентичен первому по конструкции — это фрагмент Главного здания Всероссийских выставок 1882 и 1896 годов. Чугунно-стальной каркас с декоративными элементами промышленной эстетики XIX века. Сегодня внутри расположен концертный зал на 430 мест с прозрачной стеной за сценой, спроектированный немецким архитектором Сергеем Чобаном. Зеркальные здания встроены внутрь исторических конструкций, не нагружая их.</p>
+        <h2 class="object-info__section-title">В советский период</h2>
+        <p class="object-info__desc">С 1920-х годов пакгауз обслуживал нужды формирующегося грузового порта. Здесь хранились стройматериалы для послевоенного восстановления города. Во время Великой Отечественной через него шли военные грузы для фронта. О существовании уникальных конструкций внутри не подозревали даже портовые работники. В 2017 году сняли кирпич и шифер — и глазам открылось «металлическое кружево», скрытое от мира более ста лет.</p>
+        <nav class="object-nav">
+            <a href="pakgauz_exhibition.html" class="object-nav__link">&larr; Пакгауз (выставочный)</a>
+            <a href="water_station.html" class="object-nav__link">Фильтровальная станция &rarr;</a>
+        </nav>
+    </article>
+</body>
+</html>
