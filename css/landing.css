@@ -1,0 +1,130 @@
+/* ==========================================================
+   landing.css — стили начальной страницы
+   Автор: Краснов Н.М.
+   ========================================================== */
+
+/* Простая анимация появления элементов */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.landing {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    position: relative;
+}
+
+/* Декоративная линия сверху */
+.landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 80px;
+    background: var(--border);
+}
+
+.landing__content {
+    text-align: center;
+    padding: 24px;
+}
+
+.landing__pre {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: slideUp 0.7s ease 0.2s forwards;
+}
+
+.landing__title {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideUp 0.7s ease 0.5s forwards;
+}
+
+.landing__subtitle {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideUp 0.7s ease 0.8s forwards;
+}
+
+.landing__period {
+    display: inline-block;
+    padding: 5px 22px;
+    border: 1px solid var(--accent);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 44px;
+    opacity: 0;
+    animation: slideUp 0.7s ease 1s forwards;
+}
+
+.landing__btn {
+    display: inline-block;
+    padding: 13px 44px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: var(--accent);
+    text-decoration: none;
+    transition: background 0.25s ease;
+    opacity: 0;
+    animation: slideUp 0.7s ease 1.2s forwards;
+}
+
+.landing__btn:hover {
+    background: var(--accent-hover);
+}
+
+.landing__hint {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.72rem;
+    color: var(--border);
+    white-space: nowrap;
+    opacity: 0;
+    animation: slideUp 0.7s ease 1.6s forwards;
+}
+
+.landing::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 60px;
+    background: var(--border);
+}
+
+@media (max-width: 768px) {
+    .landing__title { font-size: 2.6rem; letter-spacing: 5px; }
+    .landing__subtitle { font-size: 0.9rem; }
+}

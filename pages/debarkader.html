@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грузовой дебаркадер — Стрелка AR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="../brochure.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <span class="page-header__title">Стрелка AR</span>
+    </header>
+
+    <section class="ar-viewer">
+        <model-viewer class="ar-viewer__container" src="../models/debarkader.glb" ios-src="../models/debarkader.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель грузового дебаркадера">
+            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
+        </model-viewer>
+        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+    </section>
+
+    <article class="object-info">
+        <h1 class="object-info__title">Грузовой дебаркадер</h1>
+        <div class="object-info__meta">
+            <span class="tag">Портовое оборудование</span>
+            <span class="tag tag--accent">1930-е годы</span>
+        </div>
+
+        <!-- Фотография объекта -->
+        <figure class="object-info__photo">
+            <img src="#" alt="Дебаркадеры у Сибирских пристаней, город Горький, 1930-е годы">
+            <figcaption class="object-info__photo-caption">Дебаркадеры у Сибирских пристаней. 1930-е годы. Источник: pastvu.com</figcaption>
+        </figure>
+
+        <p class="object-info__desc">Дебаркадер — плавучая пристань, представляющая собой понтон с деревянной или металлической надстройкой и сходнями для посадки-высадки пассажиров или погрузки-выгрузки товаров. До строительства бетонных причалов дебаркадеры были основным способом швартовки судов на Стрелке и Сибирских пристанях. Суда подходили к борту дебаркадера, груз перемещали через сходни, а сам понтон стоял на якорях и поднимался и опускался вместе с уровнем воды.</p>
+        <h2 class="object-info__section-title">В советский период</h2>
+        <p class="object-info__desc">В первые годы существования Горьковского порта (1932-1934) почти вся грузовая работа велась через дебаркадеры, унаследованные от дореволюционных Сибирских пристаней. С 1934 года порт начал строить капитальные причалы с бетонной стенкой, и дебаркадеры постепенно уходили на второстепенные роли. Тем не менее в пристани «Горький-Городская» входили дебаркадеры для обслуживания пассажирских судов, а в весенний период, когда вода поднималась на несколько метров, плавучие пристани оставались единственным способом принять суда в затопленной зоне.</p>
+        <nav class="object-nav">
+            <a href="kanavinsky_bridge.html" class="object-nav__link">&larr; Канавинский мост</a>
+            <a href="ganz_16.html" class="object-nav__link">Кран Ganz 16/27,5т &rarr;</a>
+        </nav>
+    </article>
+</body>
+</html>

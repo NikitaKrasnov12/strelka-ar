@@ -10,12 +10,12 @@
 <body>
 
     <header class="page-header">
-        <a href="../index.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <a href="../brochure.html" class="page-header__back">&larr; Назад к брошюре</a>
         <span class="page-header__title">Стрелка AR</span>
     </header>
 
     <section class="ar-viewer">
-        <model-viewer class="ar-viewer__container" src="../models/alb.glb" ios-src="../models/takraf_albatros.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель крана TAKRAF Альбатрос 16/32">
+        <model-viewer class="ar-viewer__container" src="../models/alb.glb" ios-src="../models/alb.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель крана TAKRAF Альбатрос 16/32">
             <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
             <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
         </model-viewer>
@@ -29,6 +29,13 @@
             <span class="tag tag--accent">1976 — демонтирован 2017</span>
             <span class="tag">ГДР, VEB Kranbau Eberswalde</span>
         </div>
+
+        <!-- Фотография объекта -->
+        <figure class="object-info__photo">
+            <img src="../images/2016_alb.jpg" alt="Портальный кран TAKRAF Альбатрос">
+            <figcaption class="object-info__photo-caption">Кран TAKRAF Альбатрос, слева. 2016. Источник: zavodfoto.livejournal.com</figcaption>
+        </figure>
+
         <p class="object-info__desc">Кран «Альбатрос» выпускался восточногерманским заводом VEB Kranbau Eberswalde (TAKRAF) с 1970-х годов. Оснащен шарнирно-сочлененной стрелой с прямым хоботом и жесткой оттяжкой. Обеспечивал горизонтальное перемещение груза на вылете до 32 метров, что было критически важно при работе с сыпучими материалами. Комплектовался грейфером для навалочных грузов, крюком для контейнеров или электромагнитным захватом.</p>
         <h2 class="object-info__section-title">В советский период</h2>
         <p class="object-info__desc">Краны из ГДР поставлялись в СССР по линии СЭВ (Совета Экономической Взаимопомощи). На Стрелке «Альбатросы» стояли вдоль Волжского причала и были заняты перевалкой минерально-строительных грузов — речного песка и гравия. Нижегородский порт располагал девятью русловыми месторождениями песка на Волге — от Васильсурска до Нижнего Новгорода — и добывал песок собственным флотом.</p>

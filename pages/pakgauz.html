@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пакгаузы — Стрелка AR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="../brochure.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <span class="page-header__title">Стрелка AR</span>
+    </header>
+
+    <!-- 3D-модель пакгауза -->
+    <section class="ar-viewer">
+        <model-viewer class="ar-viewer__container" src="../models/pakgauzi.glb" ios-src="../models/pakgauz.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель пакгаузов на Стрелке">
+            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
+        </model-viewer>
+        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+    </section>
+
+    <article class="object-info">
+        <h1 class="object-info__title">Пакгаузы</h1>
+        <div class="object-info__meta">
+            <span class="tag">Промышленный объект / Культура</span>
+            <span class="tag tag--accent">1882 — сохранены</span>
+            <span class="tag">Инженеры Паукер, Вышнеградский</span>
+        </div>
+
+        <!-- Фотография объекта -->
+        <figure class="object-info__photo">
+            <img src="../images/1971_pakgauzi.jpg" alt="Железные конструкции внутри пакгауза после расчистки">
+            <figcaption class="object-info__photo-caption">Пакгаузы. 1970-е. Источник: nn.com</figcaption>
+        </figure>
+
+        <p class="object-info__desc">Уникальные металлические каркасы были изготовлены на Санкт-Петербургском металлическом заводе для Главного здания XV Всероссийской промышленно-художественной выставки 1882 года в Москве. 
+            В 1896 году конструкции перевезли в Нижний Новгород для XVI Всероссийской выставки. Городской голова Д.В. Сироткин выкупил каркасы, их обложили кирпичом и приспособили под склады 
+            на Сибирских пристанях. Из восьми павильонов Всероссийских выставок уцелели только два.</p>
+
+        <h2 class="object-info__section-title">В советский период</h2>
+        <p class="object-info__desc">Больше ста лет металлические конструкции — чугунные колонны и стальные арки — были скрыты за стенами портовых ангаров. 
+            В советское время пакгаузы входили в закрытую зону порта: здесь хранились зерно, стройматериалы, промышленные грузы. Во время войны через них проходили военные поставки. 
+            О «стальном кружеве» внутри не подозревали даже работники порта. Обнаружили конструкции случайно в 2015 году при расчистке территории к ЧМ-2018.</p>
+
+        <h2 class="object-info__section-title">Сегодня</h2>
+        <p class="object-info__desc">Первый пакгауз стал выставочным пространством. Второй — концертным залом на 430 мест, спроектированным архитектором Сергеем Чобаном: 
+            зеркальные здания встроены внутрь исторических конструкций, не нагружая их. Прозрачная стена за сценой открывает вид на Волгу.</p>
+
+        <nav class="object-nav">
+            <a href="sobor.html" class="object-nav__link">&larr; Собор Александра Невского</a>
+            <a href="water_station.html" class="object-nav__link">Фильтровальная станция &rarr;</a>
+        </nav>
+    </article>
+</body>
+</html>

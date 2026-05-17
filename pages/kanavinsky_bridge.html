@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Канавинский мост — Стрелка AR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="../brochure.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <span class="page-header__title">Стрелка AR</span>
+    </header>
+
+    <section class="ar-viewer">
+        <model-viewer class="ar-viewer__container" src="../models/kanavinsky_bridge.glb" ios-src="../models/kanavinsky_bridge.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель Канавинского моста">
+            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
+        </model-viewer>
+        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+    </section>
+
+    <article class="object-info">
+        <h1 class="object-info__title">Канавинский мост</h1>
+        <div class="object-info__meta">
+            <span class="tag">Транспортная инфраструктура</span>
+            <span class="tag tag--accent">1933 — действующий</span>
+        </div>
+
+        <!-- Фотография объекта -->
+        <figure class="object-info__photo">
+            <img src="../images/bridge_1942.jpg" alt="Канавинский мост через Оку, вид со стороны Стрелки, 1942 год">
+            <figcaption class="object-info__photo-caption">Канавинский (Окский) мост. 1942 год. Источник: pastvu.com</figcaption>
+        </figure>
+
+        <p class="object-info__desc">Канавинский мост через Оку, первоначально называвшийся Окским, был построен в 1930-1933 годах и стал первым постоянным мостом, соединившим нагорную и заречную части города. До его строительства переправа осуществлялась на плашкоутных (наплавных) мостах, которые разводились для прохода судов. Длина моста составляет 795 метров, он имеет семь арочных пролетов. Мост располагался в непосредственной близости от Стрелки и грузового порта, что делало его стратегически важным объектом.</p>
+        <h2 class="object-info__section-title">В советский период</h2>
+        <p class="object-info__desc">Во время Великой Отечественной войны Канавинский мост был единственной переправой через Оку, связывавшей оборонные предприятия левобережья (ГАЗ, «Красное Сормово», авиазавод) с центром города и железнодорожным узлом. Его уничтожение парализовало бы снабжение всех заводов. Зенитная установка на крыше собора Александра Невского прикрывала подходы к мосту, и ни одна бомба за всю войну не поразила переправу. Мост оставался единственным до 1965 года, когда был построен Молитовский мост.</p>
+        <nav class="object-nav">
+            <a href="tp_rp.html" class="object-nav__link">&larr; ТП-РП 2820</a>
+            <a href="debarkader.html" class="object-nav__link">Грузовой дебаркадер &rarr;</a>
+        </nav>
+    </article>
+</body>
+</html>
