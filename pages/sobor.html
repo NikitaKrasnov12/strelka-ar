@@ -13,12 +13,20 @@
         <span class="page-header__title">Стрелка AR</span>
     </header>
 
+
+    <!-- Переключатель режимов: Объект (3D-просмотр) / ДР (геолокация) -->
+    <div style="max-width:800px;margin:16px auto 0;padding:0 24px;display:flex;justify-content:center;gap:6px;">
+        <span style="padding:8px 24px;background:#8b2f1a;color:#fff;font-size:0.85rem;font-weight:600;font-family:sans-serif;">Объект</span>
+        <a href="../ar/sobor.html" style="padding:8px 24px;border:1px solid #d4c8b8;color:#7a7068;font-size:0.85rem;font-weight:600;text-decoration:none;font-family:sans-serif;transition:border-color 0.2s;"
+           onmouseover="this.style.borderColor='#8b2f1a';this.style.color='#8b2f1a'"
+           onmouseout="this.style.borderColor='#d4c8b8';this.style.color='#7a7068'">ДР</a>
+    </div>
+
     <section class="ar-viewer">
-        <model-viewer class="ar-viewer__container" src="../models/sobor.glb" ios-src="../models/sobor.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель Собора Александра Невского">
-            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
-            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
+        <model-viewer class="ar-viewer__container" src="../models/sobor.glb" ios-src="../models/sobor.usdz" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель Собора Александра Невского">
+<div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
         </model-viewer>
-        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+        <p class="ar-viewer__hint">Вращайте мышью или пальцем. Колесо — масштаб. Для ДР нажмите вкладку выше.</p>
     </section>
 
     <article class="object-info">
@@ -29,8 +37,8 @@
             <span class="tag">Архитектор Л.В. Даль</span>
 
         <figure class="object-info__photo">
-            <img src="../images/1970-1985_sobos.jpg" alt="Собор Александра Невского без куполов, 1970-е годы">
-            <figcaption class="object-info__photo-caption">Собор без куполов. 1970-е. Источник: pastvu.com</figcaption>
+            <img src="../images/1970-1985_sobos.jpg" alt="Собор Александра Невского без куполов, вид с Оки, 1940-е годы">
+            <figcaption class="object-info__photo-caption">Собор без куполов. Вид с Канавинского моста. 1940-е. Источник: pastvu.com</figcaption>
         </figure>
         </div>
         <p class="object-info__desc">Новоярмарочный собор возведен в 1868-1881 годах и на момент постройки являлся третьим по высоте собором в России. Он служил архитектурной доминантой Нижегородской ярмарки — был виден за десятки километров с воды. В 1929 году храм закрыли для богослужений. Колокола, некоторые весом в несколько тонн, сняли и отправили на переплавку. Кресты демонтировали в 1930 году. Настенные росписи и иконостас были утрачены.</p>
