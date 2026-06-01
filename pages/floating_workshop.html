@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плавучая мастерская — Стрелка AR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <a href="../brochure.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <span class="page-header__title">Стрелка AR</span>
+    </header>
+
+    <section class="ar-viewer">
+        <model-viewer class="ar-viewer__container" src="../models/workship.glb" ios-src="../models/workship.usdz" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель плавучей мастерской Нижгорпорта">
+            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
+        </model-viewer>
+        <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
+    </section>
+
+    <!-- Кнопка AR на телефоне -->
+    <div class="ar-gps-btn">
+        <a href="../ar/floating_workshop.html">Смотреть в AR</a>
+    </div>
+
+    <article class="object-info">
+        <h1 class="object-info__title">Плавучая мастерская по ремонту судов</h1>
+        <div class="object-info__meta">
+            <span class="tag">Портовая инфраструктура</span>
+            <span class="tag tag--accent">1932</span>
+            <span class="tag">Нижгорпорт</span>
+        </div>
+
+        <!-- Фотография объекта -->
+        <figure class="object-info__photo">
+            <img src="../images/1932_water_station.jpg" alt="Плавучая мастерская Нижгорпорта, вид с берега, 1932 год">
+            <figcaption class="object-info__photo-caption">Мастерские Нижгорпорта. 1932 г. Источник: pastvu.com/p/929515</figcaption>
+        </figure>
+
+        <p class="object-info__desc">Плавучая мастерская Нижегородского (позднее Горьковского) речного порта представляла собой крупный понтон с деревянной надстройкой, оборудованной слесарным, кузнечным и столярным цехами. Мастерская была пришвартована у берега Стрелки и обеспечивала текущий ремонт судов портового флота без необходимости отправлять их на судоремонтные заводы. Внутри располагались верстаки, кузнечные горны, станки для обработки металла и дерева. На крыше виднелись характерные дымовые трубы и вентиляционные короба.</p>
+        <h2 class="object-info__section-title">В советский период</h2>
+        <p class="object-info__desc">Плавучая мастерская появилась одновременно с образованием Горьковского речного порта в 1932 году. Надпись «Мастерские Нижгорпорта» на фасаде здания указывает на первые месяцы работы порта, когда город еще носил название Нижний Новгород (переименование в Горький произошло в ноябре 1932 года). Мастерская ремонтировала буксиры, баржи, катера и вспомогательный флот порта. Во время войны нагрузка на мастерскую возросла многократно: суда работали на износ, перевозя стратегические грузы, и нуждались в постоянном ремонте. Плавучие мастерские были типичным явлением для крупных речных портов СССР и работали вплоть до строительства стационарных ремонтных баз.</p>
+        <nav class="object-nav">
+            <a href="kanavinsky_bridge.html" class="object-nav__link">&larr; Канавинский мост</a>
+            <a href="ganz_16.html" class="object-nav__link">Кран Ganz 16/27,5т &rarr;</a>
+        </nav>
+    </article>
+</body>
+</html>

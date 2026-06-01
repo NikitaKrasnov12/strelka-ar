@@ -13,13 +13,19 @@
         <span class="page-header__title">Стрелка AR</span>
     </header>
 
+
+
     <section class="ar-viewer">
-        <model-viewer class="ar-viewer__container" src="../models/tp_rp.glb" ios-src="../models/tp_rp.usdz" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель трансформаторной подстанции ТП-РП 2820">
-            <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+        <model-viewer class="ar-viewer__container" src="../models/tp_rp.glb" ios-src="../models/tp_rp.usdz" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель трансформаторной подстанции ТП-РП 2820">
             <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
         </model-viewer>
         <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
     </section>
+
+    <!-- Кнопка AR на телефоне -->
+    <div class="ar-gps-btn">
+        <a href="../ar/tp_rp.html">Смотреть в AR</a>
+    </div>
 
     <article class="object-info">
         <h1 class="object-info__title">ТП-РП 2820</h1>
@@ -31,7 +37,7 @@
         <!-- Фотография объекта -->
         <figure class="object-info__photo">
             <img src="../images/2018_tprp_before.png" alt="Трансформаторная подстанция ТП-РП 2820 на территории порта">
-            <figcaption class="object-info__photo-caption">ТП-РП 2820. Территория порта. 1970-е. Источник: yandex.ru/maps</figcaption>
+            <figcaption class="object-info__photo-caption">ТП-РП 2820. 2018. Источник: yandex.ru/maps</figcaption>
         </figure>
 
         <p class="object-info__desc">Трансформаторная подстанция — распределительная подстанция, обеспечивавшая электроснабжение всего Горьковского речного порта. Подстанция питала портальные краны, освещение причалов, ленточные транспортеры, электропогрузчики и все складское хозяйство. Типовое промышленное сооружение из кирпича с характерными для советской промышленной архитектуры 1950-1960-х годов формами.</p>
