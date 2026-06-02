@@ -21,15 +21,10 @@
 
 
     <section class="ar-viewer">
-        <model-viewer
-            class="ar-viewer__container" src="../models/ganz_16.glb" ios-src="../models/ganz_16.usdz" ar camera-controls auto-rotate shadow-intensity="1" environment-image="neutral"
-            alt="3D-модель крана Ganz 16/27,5т">
-
+        <model-viewer class="ar-viewer__container" src="../models/ganz_16.glb" ios-src="../models/ganz_16.usdz" ar camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель крана Ganz 16/27,5т">
             <!-- Кнопка AR на телефоне -->
-            <div class="model-loading" slot="poster">
-                <div class="spinner"></div>
-                <p>Загрузка 3D-модели...</p>
-            </div>
+             <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
+            <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
         </model-viewer>
         <p class="ar-viewer__hint">На телефоне: нажмите «Смотреть в AR». На ПК: вращайте мышью, колесо — масштаб.</p>
     </section>
