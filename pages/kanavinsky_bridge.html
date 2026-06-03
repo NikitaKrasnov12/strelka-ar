@@ -9,14 +9,14 @@
 </head>
 <body>
     <header class="page-header">
-        <a href="../brochure.html" class="page-header__back">&larr; Назад к брошюре</a>
+        <a href="../brochure.html" class="page-header__back">&larr; Назад к главной странице</a>
         <span class="page-header__title">Стрелка AR</span>
     </header>
 
 
 
     <section class="ar-viewer">
-        <model-viewer class="ar-viewer__container" src="../models/bridge.glb" ios-src="../models/bridge.usdz" camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель Канавинского моста">
+        <model-viewer class="ar-viewer__container" src="../models/bridge.glb" ios-src="../models/bridge.usdz" ar camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель Канавинского моста">
             <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
             <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
         </model-viewer>
