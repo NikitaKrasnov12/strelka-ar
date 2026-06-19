@@ -16,7 +16,9 @@
 
 
     <section class="ar-viewer">
-        <model-viewer class="ar-viewer__container" src="../models/bridge.glb" ios-src="../models/bridge.usdz" ar camera-controls auto-rotate shadow-intensity="1" environment-image="neutral" alt="3D-модель Канавинского моста">
+        <model-viewer class="ar-viewer__container" src="../models/bridge.glb" ios-src="../models/bridge.usdz" ar camera-controls auto-rotate 
+        exposure="1.0" shadow-intensity="1.5" shadow-softness="0.7" tone-mapping="commerce"
+        environment-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_HDR.hdr" alt="3D-модель Канавинского моста">
             <button slot="ar-button" class="ar-viewer__btn">Смотреть в AR</button>
             <div class="model-loading" slot="poster"><div class="spinner"></div><p>Загрузка 3D-модели...</p></div>
         </model-viewer>
