@@ -317,7 +317,6 @@ body {
     width: 100%;
     height: 450px;
     background: linear-gradient(180deg, #e8e4df 0%, #d4cfc8 100%);
-    background-color: #1a1a2e;
     border: 1px solid var(--border);
     border-radius: 4px;
     overflow: hidden;
